@@ -32,6 +32,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
+  layout: "auth/index",
   components: {
     Logo
   }
