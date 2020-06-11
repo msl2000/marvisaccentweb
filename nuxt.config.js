@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/images/system/logo/favicon.ico' }
     ]
   },
   /*
@@ -23,11 +23,16 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/scss/index.scss',
+    '@/assets/scss/elementui/override.scss',
+    '@/node_modules/@fortawesome/fontawesome-pro/css/all.css'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {src: '@/plugins/axios', ssr: false},
+    {src: '@/plugins/elementui', ssr: false},
   ],
   /*
   ** Nuxt.js dev-modules
