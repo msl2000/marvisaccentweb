@@ -4,8 +4,8 @@
     <div class="menu d-flex flex-column w-100">
       <div class="menu-item w-100" v-for="(item, index) in items" :key="index">
         <a :href="item.href" class="d-flex align-items-center justify-content-center h-100 flex-column">
-          <i class="far" :class="item.icon" />
-          <!-- <b class="text-muted" style="font-size:0.65rem;">{{item.name}}</b> -->
+          <i class="fad" :class="item.icon" />
+          <b class="text-muted mt-2" style="font-size:0.55rem;">{{item.name}}</b>
         </a>
       </div>
     </div>
@@ -44,6 +44,11 @@ export default {
           name: 'Products',
           href: '/products',
           icon: 'fa-inventory'
+        },
+        {
+          name: 'Promotions',
+          href: '/products',
+          icon: 'fa-percent'
         },
         {
           name: 'Customers',

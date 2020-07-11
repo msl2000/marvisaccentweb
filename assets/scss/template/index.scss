@@ -1,3 +1,9 @@
 @import "./size";
 @import "./font";
 @import "./listview";
+
+.pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}

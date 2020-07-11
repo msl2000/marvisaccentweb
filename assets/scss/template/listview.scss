@@ -2,11 +2,19 @@
 
 
 .listview {
+    flex: 1 1 auto;
+    
     .listview-navigation {
         flex: 0 0 64px;
     }
 
-    .listview-header {
-        flex: 0 0 64px;
+    // .listview-header {
+    //     flex: 0 0 64px;
+    // }
+
+    .listview-content {
+        width: 100%;
+        overflow-y:hidden;
+        overflow-x:scroll;
     }
 }

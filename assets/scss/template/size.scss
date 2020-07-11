@@ -7,3 +7,7 @@
 .w100h {
     width: 100vw;
 }
+
+.content-width {
+    width: calc(100vw - 52px);
+}

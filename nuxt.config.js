@@ -33,6 +33,7 @@ export default {
   plugins: [
     {src: '@/plugins/axios', ssr: false},
     {src: '@/plugins/elementui', ssr: false},
+    {src: '@/plugins/slideupdown', ssr: false},
   ],
   /*
   ** Nuxt.js dev-modules
