@@ -3,7 +3,7 @@
     <div class="object-group-list border-right p-4">
       <h1 class="mb-5">Products</h1>
       <div class="d-flex flex-column">
-        <h3>
+        <h3 class="d-flex justify-content-between align-items-center">
           Catalogue
           <i class="ml-2 fal fa-chevron-down" />
         </h3>
@@ -12,6 +12,7 @@
           <span class="mt-2">Clothes</span>
           <span class="mt-2">Pants</span>
         </div>
+        <el-button class="mt-4" plain><i class="fal fa-plus mr-2" size="small"/> Add </el-button>
       </div>
     </div>
     <div class="listview flex-grow-1 d-flex flex-column overflow-hidden">
@@ -22,7 +23,7 @@
         <div class="h-100 flex-grow-1 d-flex justify-content-end align-items-center">
           <button class="btn btn-tranparent" @click="filters_toggled = !filters_toggled">
             <small>
-              <el-badge :value="20" :max="99" class="item">
+              <el-badge :value="active_filters.length" :max="99" class="item">
                 <i class="fas fa-filter px-1" />
               </el-badge>
             </small>
@@ -93,7 +94,7 @@
           </div>
         </div>
       </slide-up-down>
-      <div class="flex-grow-1 d-flex flex-column listview-content position-relative">
+      <div class="listview-content position-relative">
         <el-table
           ref="multipleTable"
           :data="tableData"
@@ -138,7 +139,7 @@
           </el-table-column>
           <el-table-column property="tags" label="Tags" width="150">
             <template slot-scope="scope">
-              <el-tag size="mini" v-for="(tag, index) in scope.row.tags" :key="index">{{tag}}</el-tag>
+              <el-tag class="mr-2" type="plain" size="mini" v-for="(tag, index) in scope.row.tags" :key="index">{{tag}}</el-tag>
             </template>
           </el-table-column>
         </el-table>
@@ -155,6 +156,159 @@ export default {
       checkList: ['selected and disabled', 'Option A'],
       tableData: [
         {
+          image:
+            'https://cdn11.bigcommerce.com/s-rxzabllq/images/stencil/1280x1280/products/478/16879/Bulk_Buy_Plain_slim_fit_Ringer_Tshirt-White_Red__80053.1555070388.jpg?c=2',
+          name: 'White T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://cdn11.bigcommerce.com/s-rxzabllq/images/stencil/460x460/products/909/15534/Kids-Plain-Poly-Fit-Quick_Dry-Tshirt-red__99515.1541591234.jpg?c=2&imbypass=on',
+          name: 'Red T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://www.celine.com/on/demandware.static/-/Sites-masterCatalog/default/dw9aa699ca/images/large/2X351501F.25PQ_1_SPR20_461508v2.jpg',
+          name: 'Pink T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://cdn11.bigcommerce.com/s-rxzabllq/images/stencil/1280x1280/products/478/16879/Bulk_Buy_Plain_slim_fit_Ringer_Tshirt-White_Red__80053.1555070388.jpg?c=2',
+          name: 'White T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://cdn11.bigcommerce.com/s-rxzabllq/images/stencil/460x460/products/909/15534/Kids-Plain-Poly-Fit-Quick_Dry-Tshirt-red__99515.1541591234.jpg?c=2&imbypass=on',
+          name: 'Red T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://www.celine.com/on/demandware.static/-/Sites-masterCatalog/default/dw9aa699ca/images/large/2X351501F.25PQ_1_SPR20_461508v2.jpg',
+          name: 'Pink T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://cdn11.bigcommerce.com/s-rxzabllq/images/stencil/1280x1280/products/478/16879/Bulk_Buy_Plain_slim_fit_Ringer_Tshirt-White_Red__80053.1555070388.jpg?c=2',
+          name: 'White T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://cdn11.bigcommerce.com/s-rxzabllq/images/stencil/460x460/products/909/15534/Kids-Plain-Poly-Fit-Quick_Dry-Tshirt-red__99515.1541591234.jpg?c=2&imbypass=on',
+          name: 'Red T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+        {
+          image:
+            'https://www.celine.com/on/demandware.static/-/Sites-masterCatalog/default/dw9aa699ca/images/large/2X351501F.25PQ_1_SPR20_461508v2.jpg',
+          name: 'Pink T-Shirt',
+          sku: 'sku123123',
+          barcode: '342384703',
+          available: 200,
+          on_hand: 200,
+          incoming: 5,
+          pending_orders: 2,
+          sold: 120,
+          self_price: 150,
+          wholesale_price: 140,
+          cost: 120,
+          tags: ['Clothing', 'Winner'],
+          category: 'shirt'
+        },
+                {
           image:
             'https://cdn11.bigcommerce.com/s-rxzabllq/images/stencil/1280x1280/products/478/16879/Bulk_Buy_Plain_slim_fit_Ringer_Tshirt-White_Red__80053.1555070388.jpg?c=2',
           name: 'White T-Shirt',
