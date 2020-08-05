@@ -3,9 +3,8 @@
 
 The application has a frontend and backend instance running and is built with the following frameworks
 
-  - NuxtJS (VueJS Framework)
-  - See HTML in the right
-  - Magic
+  - NuxtJS (VueJS Framework) - Front End
+  - Laravel - Backend
 
 # About the task!
 
@@ -25,7 +24,7 @@ The frontend application uses a number of open source projects to work properly:
 * [Axios] - Promise based HTTP client for the browser and node.js
 * [Dillinger] - Readme Editor
 
-### Installation
+### Installation of the Frontend
 
 For installation on a local invironment running an Linux/Windows or Mac machine, please refer to the following build setup
 
