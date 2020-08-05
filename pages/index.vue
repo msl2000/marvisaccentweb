@@ -33,7 +33,7 @@
       >
         <h1>Accent Group Coding Challenge</h1>
         <h3 class="text-muted">FrontEnd: VueJS(Using NuxtJS)</h3>
-        <h3 class="text-muted">Database: MYSQL</h3>
+        <h3 class="text-muted">Backend: Laravel</h3>
         <h3 class="text-muted">Database: MYSQL</h3>
       </div>
       <div class="col-lg-6 col-sm-push-12 col-sm-12">
