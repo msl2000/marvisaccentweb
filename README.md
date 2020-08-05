@@ -27,7 +27,7 @@ The frontend application uses a number of open source projects to work properly:
 
 ### Installation
 
-For installation on a test invironment running an Linux/Windows or Mac machine, please refer to the following build setup
+For installation on a local invironment running an Linux/Windows or Mac machine, please refer to the following build setup
 
 ## Build Setup
 
@@ -35,23 +35,21 @@ For installation on a test invironment running an Linux/Windows or Mac machine, 
 # install dependencies
 $ npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-
+# install sass-loader if required
 $ npm install sass-loader sass webpack --save-dev
 
+
+# adjust fontawesome configuration for Pro access
 $ npm install --save @fortawesome/fontawesome-free
 $ npm config set "@fortawesome:registry" https://npm.fontawesome.com/ && \
-$ npm config set "//npm.fontawesome.com/:_authToken" C8B98D53-C191-449B-AD80-3C5C87912B67
+$ npm config set "//npm.fontawesome.com/:_authToken" ${TOKEN HERE}
 
 $ npm install --save @fortawesome/fontawesome-pro
+
+#Run the project on your local
+
+$ npm run dev
 
 ```
 
