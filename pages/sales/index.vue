@@ -3,7 +3,7 @@
     <div class="listview flex-grow-1 d-flex flex-column overflow-hidden">
       <div class="listview-navigation border-bottom d-flex p-3 align-items-center">
         <h1 class="mr-3 mb-0">Sales</h1>
-        <el-input style="flex: 0 0 350px" placeholder="Search sales" v-model="search">
+        <el-input style="flex: 0 0 350px" placeholder="Search sales" v-model="search" clearable @clear="applySearch">
           <el-button slot="append" icon="el-icon-search" @click="applySearch"></el-button>
         </el-input>
       </div>
