@@ -54,7 +54,7 @@
         </div>
       </div>
       <div class="listview-content position-relative">
-        <sales-table />
+        <sales-table :props="loaded"/>
       </div>
     </div>
   </div>
