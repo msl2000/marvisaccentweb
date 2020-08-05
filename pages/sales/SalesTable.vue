@@ -24,7 +24,7 @@
       <template slot-scope="scope">
         <span>
           <i class="mr-2 fas fa-dollar-sign" />
-          {{scope.row.price}} Loaded: {{loaded}}
+          {{scope.row.price}}
         </span>
       </template>
     </el-table-column>
