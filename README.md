@@ -1,6 +1,6 @@
-# PyneTree
+# Accent App
 
-> Inventory and order system
+> Accent Challenge
 
 ## Build Setup
 

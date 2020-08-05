@@ -1,2 +1,2 @@
 window.axios = require('axios');
-window.axios.defaults.baseUrl = process.env.API_URL;
+window.axios.defaults.baseURL = process.env.API_URL;
