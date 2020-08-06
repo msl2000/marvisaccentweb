@@ -1,7 +1,8 @@
+
 export const state = () => ({
     sales: [],
     filters: {},
-    loaded: false,
+    loaded: true,
     loadingMore: false,
     total: 0,
     search: null,
@@ -53,7 +54,6 @@ export const mutations = {
 
 export const actions = {
     init({ dispatch, commit }) {
-        commit('setLoaded', { value: false })
         dispatch('loadSalesData', true);
     },
     async loadSalesData({ state, commit, dispatch, getters }, reset = false) {
