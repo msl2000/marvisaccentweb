@@ -24,6 +24,15 @@ The frontend application uses a number of open source projects to work properly:
 * [Axios] - Promise based HTTP client for the browser and node.js
 * [Dillinger] - Readme Editor
 
+### DESIGN PATTERNS
+
+Some patterns used to solve the problem.
+
+* [Repository Pattern] - Separate the domain and the persistent layer. The repository provides a collection interface to access data stored in a database, file system or external service
+
+* [Chain-of-responsibility pattern] - design pattern consisting of a source of command objects and a series of processing objects.
+
+
 ### Installation of the Frontend
 
 For installation on a local invironment running an Linux/Windows or Mac machine, please refer to the following build setup
