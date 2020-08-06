@@ -1,8 +1,7 @@
-
 export const state = () => ({
     sales: [],
     filters: {},
-    loaded: true,
+    loaded: false,
     loadingMore: false,
     total: 0,
     search: null,
@@ -54,10 +53,11 @@ export const mutations = {
 
 export const actions = {
     init({ dispatch, commit }) {
+        commit('setLoaded', { value: false })
         dispatch('loadSalesData', true);
     },
     async loadSalesData({ state, commit, dispatch, getters }, reset = false) {
-        if (getters.getLoaded && !getters.loadingMore) {
+        if (!getters.loadingMore) {
             if (reset) dispatch('reset');
             else commit('setLoadingMore', { value: true });
             const res = await this.$repositories.sale.all(getters.getFilters)
